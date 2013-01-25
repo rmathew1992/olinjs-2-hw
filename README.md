@@ -201,6 +201,28 @@ Are you running into errors that the first page of Google results doesn't solve?
 
 * Fork this repo to your own account
 * Run `express` in the folder that you just forked to create a new express app
+* Edit your `package.json` file to look like this
+
+```json
+{
+  "name": "olinjs-2-hw",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3.x",
+    "jade": "*",
+    "mongoose": "3.x"
+  },
+    "engines": {
+    "node": "0.8.14 ",
+    "npm": "1.1.65"
+  }
+}
+```
+* Run `npm install`
 * Create an app that has the following routes
   * GET `/cats/new` => creates a new cat. Cats have a random age, a list of colors, and a name. Don't hardcode these values.
   * GET `/cats` => shows a sorted list of cats by age. This should display their names, colors, and age
