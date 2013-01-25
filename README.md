@@ -209,6 +209,7 @@ Are you running into errors that the first page of Google results doesn't solve?
 * deploy this to Heroku and add your app to the [homework 2 sheet](https://docs.google.com/spreadsheet/ccc?key=0AjqGw-pw5UuudFhQSmJhZlRZWEhRTWcwYmxBVld6c1E#gid=0)
 
 ##References
-*[MongooseJS](http://mongoosejs.com/)
-*[MongoDB](http://www.mongodb.org/)
-*[Jade](http://jade-lang.com/)
+
+* [MongooseJS](http://mongoosejs.com/)
+* [MongoDB](http://www.mongodb.org/)
+* [Jade](http://jade-lang.com/)
