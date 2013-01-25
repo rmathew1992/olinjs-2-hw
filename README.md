@@ -1,6 +1,6 @@
 #olin.js #2 — homework
 
-**Due Jan 29 before class**
+**Due Monday Jan 29 before class**
 
 After the second lesson, we should be able to create and deploy an Express app that saves data to a Mongo database.
 
