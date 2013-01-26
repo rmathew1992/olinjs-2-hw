@@ -6,9 +6,57 @@ After the second lesson, we should be able to create and deploy an Express app t
 
 ##Reading
 
-The olinjs-2 repo should be updated with new code that shows a few examples of things we didn't get to in class
+The [olinjs-2 repo](https://github.com/olinjs/olinjs-2) should be updated with new code that shows a few examples of things we didn't get to in class
 * Breakout out our database models into it's own folder
 * Showing data in HTML through jade
+
+Go to your olinjs-2 repo folder and run `git pull`. You should see a message like 
+```
+remote: Counting objects: 40, done.
+remote: Compressing objects: 100% (28/28), done.
+remote: Total 37 (delta 13), reused 29 (delta 6)
+Unpacking objects: 100% (37/37), done.
+From github.com:olinjs/olinjs-2
+   e2b77b6..6caddd9  master     -> origin/master
+Auto-merging routes/user.js
+CONFLICT (add/add): Merge conflict in routes/user.js
+Auto-merging routes/index.js
+CONFLICT (add/add): Merge conflict in routes/index.js
+Auto-merging package.json
+CONFLICT (content): Merge conflict in package.json
+Auto-merging app.js
+CONFLICT (add/add): Merge conflict in app.js
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+This is because we edited a lot of files during class and they were edited again by me later on. If you guys have used Subversion before, you've probably seen these errors. This just means that Git tried to combine our two changes together, but since we changed the same things, Git doesn't know which change should be kept and which one should be thrown away. So open up one of the files Git says it has a merge conflict for (such as app.js) and you should see something like this
+
+```
+<<<<<<< HEAD
+  , user = require('./routes/user')
+  , http = require('http')
+  , path = require('path');
+
+var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGOLAB_URI || 'localhost');
+
+var schema = mongoose.Schema(
+  { name: 'string' }
+);
+
+var Cat = mongoose.model('cat', schema);
+=======
+  , User = require('./models/user')
+  , user = require('./routes/user')
+  , http = require('http')
+  , path = require('path')
+  , mongoose = require('mongoose');
+>>>>>>> 6caddd920a478eacc1f9598f2647f7fddc251ea7
+```
+
+The first part is the stuff you had in your file. The second part is the stuff I modified. The long string of numbers is the commit id of the change that conflicted with your local copy of files. You get to choose which part you want to keep. Just delete the lines you don't want.
+
+Now if you `git add app.js` and then `git commit -m "fixing merge"` and `git push` you can now push the updated code without conflicts back to your own repository.
 
 ###Path parameters
 Before starting on the assignment we need to learn about *path parameters*. Path parameters are routes that have variables in them. So let's say that we have a `/users` route. What if we want to show Bob's homepage every time we went to `/users/bob`? How would we tell our server to route that to Bob's homepage? We could do something like 
