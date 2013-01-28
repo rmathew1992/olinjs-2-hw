@@ -276,7 +276,7 @@ Are you running into errors that the first page of Google results doesn't solve?
   * GET `/cats` => shows a sorted list of cats by age. This should display their names, colors, and age
   * GET `/cats/color/:color` => where :color is a parameter, such as "orange" or "grey". It shows a sorted list of cats by age that have that specific color
   * GET `/cats/delete/old` => deletes the oldest cat :c The cat should no longer appear on any lists
-* deploy this to Heroku and add your app to the [homework 2 sheet](https://docs.google.com/spreadsheet/ccc?key=0AquaTFYCGpvgdHhBZjVHeGpxeEM5T2RrNl9SOTVYMkE)
+* deploy this to Heroku and add your app to the [homework 2 sheet](https://docs.google.com/spreadsheet/ccc?key=0AjqGw-pw5UuudFhQSmJhZlRZWEhRTWcwYmxBVld6c1E)
 
 ##References
 
