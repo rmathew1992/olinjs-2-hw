@@ -274,7 +274,7 @@ Are you running into errors that the first page of Google results doesn't solve?
 * Create an app that has the following routes
   * GET `/cats/new` => creates a new cat. Cats have a random age, a list of colors, and a name. Don't hardcode these values.
   * GET `/cats` => shows a sorted list of cats by age. This should display their names, colors, and age
-  * GET `/cats/color/:color` => shows a sorted list of cats by age that have that specific color
+  * GET `/cats/color/:color` => where :color is a parameter, such as "orange" or "grey". It shows a sorted list of cats by age that have that specific color
   * GET `/cats/delete/old` => deletes the oldest cat :c The cat should no longer appear on any lists
 * deploy this to Heroku and add your app to the [homework 2 sheet](https://docs.google.com/spreadsheet/ccc?key=0AquaTFYCGpvgdHhBZjVHeGpxeEM5T2RrNl9SOTVYMkE)
 
