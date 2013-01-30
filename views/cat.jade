@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 Cats
+  p List of Cats
+  div
+    each cat, i in cats
+      div(value=cat) #{cat.name} is #{cat.age} years old and the color #{cat.color}

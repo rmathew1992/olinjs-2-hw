@@ -1,0 +1,12 @@
+//Connecting Mongoose 
+var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGOLAB_URI || 'localhost');
+
+//Create a schema and apply it to the model
+var catschema = mongoose.Schema({ name: String, age: { type: Number}, color:[String]});
+var Cat = mongoose.model('Cat', catschema);
+
+module.exports=Cat;
+
+
+
